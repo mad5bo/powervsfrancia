@@ -25,7 +25,7 @@ variable "powerinstanceid" {
 }
 
 variable "instancename" {
-  #default = "myinstance"
+  default = "ibmi-demo"
   description = "Name of the instance"
 }
 
