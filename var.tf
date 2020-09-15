@@ -1,5 +1,6 @@
 variable "ibmcloud_api_key" {
     description = "Denotes the IBM Cloud API key to use"
+    default = "nlRgZOKJZz2IskYnJsuRJ0GWFAeQ1NS9NIInf0rgTWSQ"
 }
 
 variable "ibmcloud_region" {
@@ -14,21 +15,22 @@ variable "ibmcloud_zone" {
 
 variable "imagename" {
   description = "Name of the image key to be used"
-  default = "ibm74-dev-mop"
+  default = "ibmi73vm"
 }
 
 variable "powerinstanceid" {
   description = "Power Instance associated with the account"
-  default = "f0f71cbe-7997-4924-8321-7f876a494973" 
+  default = "30295a9a-9ffa-4b5b-8b7d-efa06f3d38a7" 
 }
 
 variable "instancename" {
-  #default = "myinstance"
+  default = "powervsfirst"
   description = "Name of the instance"
 }
 
 variable "sshkeyname" {
   description = "Name of the ssh key to be used"
+    default = "30295a9a-9ffa-4b5b-8b7d-efa06f3d38a7"
 }
 
 variable "volname" {
@@ -42,7 +44,7 @@ variable "networkname" {
 
 variable "sshkey" {
   description = "Public ssh key"
-  default="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwSB2aPXJjf63vGJ2LUbZxjazahPSgYnfe0rXmx+rMCu7adJcXbM6GHN5LqEQ9OPnLv99YwraE6f5OgZtHVzzD8FBaXk5NdMxXNhSXD1P0MAbJnUMxgOK+2Siodl/0iF0EjuKuu3QneR68jA3c57/YkKK4MaZRVnG+KMTKw8A6LsLGUPFc/PyZcoNMZFCpZm3np7ljubcvmxrNj5OJSeakur8FZdP36kaNfXQO7QbiCjnVEpPVxL/tRLDtxbw9/qetSwuQORfj9I1+tH+Al1CYq0Pr9YVaQqWdGAbxQzZT8Bs43rI3tqN9ddSOvm6dW6zNhljVUlxyQAokG5hl5XlJ"
+  default="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCocSaFdNPG2CQ5dFX9b1w0y+ihDE6F7t0yaHeg6s7auLONkR0hGb3h2p/K7pUfQ8J/UHEnTsR6jPp9QSLgpzqzTqDK7fihmv51HiZ7kyfprwFwHv3QwomcJ6L6xAsUTcPYE+aWTIxRm2iwE96YSKnqFip3J0+TXtI6EBxcYt2n0DKdn/i/gUPiGg1WW9bFbXdxU7AZdFTgtCh2D27sH0ZA/RuJmtUD3rVTZD6hqjUoG/Eg0CT9ukhameVjcX/i3Kj05xlhSalIyd816aRhP6BnIeMrwdyevO8RIeWV1XvbHOyopfWel6lQKfSuZSBqVpmO35MXeeN3KJhdvh4dJJ4B ap_barrientos@cloudshell-c8aa8507-e994-41a2-ba16-d519bd25ad11-1-584985cfczhk5"
 }
 
 variable "memory" {
@@ -62,7 +64,7 @@ variable "proc_type" {
 
 variable "ssh_key_name" {
     description = "SSH key name in IBM Cloud to be used for SSH logins"
-    default="TEST"
+    default="ibmikey"
 }
 
 variable "shareable" {
