@@ -5,11 +5,11 @@ variable "ibmcloud_api_key" {
 
 variable "ibmcloud_region" {
     description = "Denotes which IBM Cloud region to connect to"
-    default     = "us-south"
+    default     = "us-east"
 }
 variable "ibmcloud_zone" {
     description = "Denotes which IBM Cloud region to connect to"
-    default     = "us-south"
+    default     = "us-east"
 }
 
 
