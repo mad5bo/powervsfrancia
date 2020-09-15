@@ -1,50 +1,33 @@
+#####################################################################
+##
+##      Created 9/8/20 by IBMDemo. for PowerVS-IBMi
+##
+#####################################################################
+
 variable "ibmcloud_api_key" {
     description = "Denotes the IBM Cloud API key to use"
-    default = "nlRgZOKJZz2IskYnJsuRJ0GWFAeQ1NS9NIInf0rgTWSQ"
+    default     = "nlRgZOKJZz2IskYnJsuRJ0GWFAeQ1NS9NIInf0rgTWSQ"
+    
 }
 
 variable "ibmcloud_region" {
     description = "Denotes which IBM Cloud region to connect to"
     default     = "us-east"
 }
+
 variable "ibmcloud_zone" {
-    description = "Denotes which IBM Cloud region to connect to"
+    description = "Denotes the zone within the region to connect to (only needed for multi-zone regions--e.g., eu-de-1)"
     default     = "us-east"
 }
 
-
-variable "imagename" {
-  description = "Name of the image key to be used"
-  default = "ibmi73vm"
+variable "vm_name" {
+    description = "Name of the VM"
+    default     = "demo-VMi"
 }
 
-variable "powerinstanceid" {
-  description = "Power Instance associated with the account"
-  default = "30295a9a-9ffa-4b5b-8b7d-efa06f3d38a7" 
-}
-
-variable "instancename" {
-    description = "Name of the instance"
-    default = "IBMiVS"
-}
-
-variable "sshkeyname" {
-  description = "Name of the ssh key to be used"
-    default = "30295a9a-9ffa-4b5b-8b7d-efa06f3d38a7"
-}
-
-variable "volname" {
-  default = "myvol"
-  description = "Name of the volume"
-}
-variable "networkname" {
-  default = "mypublicnw"
-  description = "Name of the network"
-}
-
-variable "sshkey" {
-  description = "Public ssh key"
-  default="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCocSaFdNPG2CQ5dFX9b1w0y+ihDE6F7t0yaHeg6s7auLONkR0hGb3h2p/K7pUfQ8J/UHEnTsR6jPp9QSLgpzqzTqDK7fihmv51HiZ7kyfprwFwHv3QwomcJ6L6xAsUTcPYE+aWTIxRm2iwE96YSKnqFip3J0+TXtI6EBxcYt2n0DKdn/i/gUPiGg1WW9bFbXdxU7AZdFTgtCh2D27sH0ZA/RuJmtUD3rVTZD6hqjUoG/Eg0CT9ukhameVjcX/i3Kj05xlhSalIyd816aRhP6BnIeMrwdyevO8RIeWV1XvbHOyopfWel6lQKfSuZSBqVpmO35MXeeN3KJhdvh4dJJ4B ap_barrientos@cloudshell-c8aa8507-e994-41a2-ba16-d519bd25ad11-1-584985cfczhk5"
+variable "power_instance_id" {
+    description = "Power Virtual Server instance ID associated with your IBM Cloud account (note that this is NOT the API key)"
+    default  =  "30295a9a-9ffa-4b5b-8b7d-efa06f3d38a7"
 }
 
 variable "memory" {
@@ -64,17 +47,17 @@ variable "proc_type" {
 
 variable "ssh_key_name" {
     description = "SSH key name in IBM Cloud to be used for SSH logins"
-    default="ibmikey"
-}
+    default     = "ibmikey"
+ }   
 
-variable "shareable" {
-    description = "Should the data volume be shared or not - true/false"
-    default     = "true"
-}
+#variable "shareable" {
+#    description = "Should the data volume be shared or not - true/false"
+#    default     = "true"
+#}
 
 variable "networks" {
     description = "List of networks that should be attached to the VM"
-    default     = ["internal"]
+    default     = ["public-192_168_130_56-29-VLAN_2000"]
 }
 
 variable "system_type" {
@@ -82,9 +65,14 @@ variable "system_type" {
     default     = "s922"
 }
 
-variable "migratable" {
-    description = "Can the VM be migrated - true/false"
-    default     = "true"
+#variable "migratable" {
+#    description = "Can the VM be migrated - true/false"
+#    default     = "true"
+#}
+
+variable "image_name" {
+    description = "Name of the image from which the VM should be deployed"
+    default     = "ibmi73vm"
 }
 
 variable "replication_policy" {
@@ -92,10 +80,10 @@ variable "replication_policy" {
     default     = "none"
 }
 
-variable "replication_scheme" {
-    description = "Replication scheme for the VM"
-    default     = "suffix"
-}
+#variable "replication_scheme" {
+#    description = "Replication scheme for the VM"
+#    default     = "suffix"
+#}
 
 variable "replicants" {
     description = "Number of VM instances to deploy"
