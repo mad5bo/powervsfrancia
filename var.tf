@@ -24,8 +24,8 @@ variable "powerinstanceid" {
 }
 
 variable "instancename" {
-  default = "Power Systems Virtual Server-ibmi"
-  description = "Name of the instance"
+    description = "Name of the instance"
+    default = "IBMiVS"
 }
 
 variable "sshkeyname" {
