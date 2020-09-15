@@ -36,8 +36,8 @@ data "ibm_pi_volume" "dsvolume" {
 }
 
 data "ibm_pi_image" "powerimages" {
-# pi_image_name        = var.imagename
-  pi_image_name        = "ibmi73vm"
+  pi_image_name        = var.imagename
+#  pi_image_name        = "ibmi73vm"
   pi_cloud_instance_id = var.powerinstanceid
 }
 
