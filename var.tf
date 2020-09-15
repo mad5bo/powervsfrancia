@@ -24,7 +24,7 @@ variable "powerinstanceid" {
 }
 
 variable "instancename" {
-  default = "powervsfirst"
+  default = "Power Systems Virtual Server-ibmi"
   description = "Name of the instance"
 }
 
