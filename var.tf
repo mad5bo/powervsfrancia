@@ -15,7 +15,7 @@ variable "ibmcloud_zone" {
 
 variable "imagename" {
   description = "Name of the image key to be used"
-  default = ""
+  default = "b5b250ae-d7a5-40cc-bec6-24121a9a6aa7"
 }
 
 variable "powerinstanceid" {
